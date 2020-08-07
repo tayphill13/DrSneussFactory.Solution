@@ -83,7 +83,7 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Machine machine1, int EngineerId)
+    public ActionResult Create(Machine machine, int EngineerId)
     {
       _db.Machines.Add(machine);
     if  (EngineerId != 0)
