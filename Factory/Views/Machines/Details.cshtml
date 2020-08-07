@@ -21,7 +21,7 @@ else
   @foreach(var join in Model.Engineers)
   {
     <li>@Html.ActionLink(@join.Engineer.Name, "Details", "Engineers", new { id = @join.Engineer.EngineerId})</li>
-    @using (Html.BeginForm("DeleteEngineer", "Engineers"))
+    @using (Html.BeginForm("Delete", "Engineers"))
     {
       @Html.Hidden("joinId", @join.EngineerMachineId)
       <input type="submit" value="Delete"/>
