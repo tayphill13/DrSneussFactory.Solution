@@ -28,18 +28,22 @@
         </ul>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-3">
-      </div>
-      <div class="col-md-6"  
-        <div class="container">
-          @RenderBody()
+    @* <div class="container"> *@
+      <div class="row">
+        <div class="col-md-5">
+        </div>
+        <div class="container">  
+          <div class="col-md-2"
+              <div>
+                @RenderBody()
+              </div>
+          </div
+        </div>
+        <div class="col-md-5">
         </div>
         <div id="footer">@Html.Partial("Footer")
         </div>
       </div>
-      <div class="col-md-3">
-      </div>
-    </div>
+    @* </div> *@
   </body>
 </html>
