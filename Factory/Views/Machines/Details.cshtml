@@ -4,10 +4,10 @@
 
 @model Factory.Models.Machine
 
-<h2>Machine Details</h2>
+<h1>Machine Details</h1>
 <hr />
-<h3>Name: @Html.DisplayFor(model => model.Name)</h3>
-<h3>Product it produces: @Html.DisplayFor(model => model.Product)</h3>
+<h2>Name: @Html.DisplayFor(model => model.Name)</h2>
+<h5>Product it produces: @Html.DisplayFor(model => model.Product)</h5>
 
 
 @if(@Model.Engineers.Count == 0)
