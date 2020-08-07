@@ -9,3 +9,13 @@ body {
   border-color: rgba(32, 17, 17, 0.85);
   border-radius: 15px;
 }
+
+div#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  background:rgba(245, 245, 245, 0.55);
+  padding:8px;
+  text-align: center;
+}
