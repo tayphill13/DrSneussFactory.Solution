@@ -1,0 +1,36 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h2>Machine Details</h2>
+<hr />
+<h3>Name: @Html.DisplayFor(model => model.Name)</h3>
+<h3>Product it produces: @Html.DisplayFor(model => model.Product)</h3>
+
+
+@if(@Model.Engineers.Count == 0)
+{
+  <p>This machine does not have any engineers certified to work on it</p>
+}
+else
+{
+  <h4>Engineers that are certified to work on this machine:</h4>
+  <ul>
+  @foreach(var join in Model.Engineers)
+  {
+    <li>@Html.ActionLink(@join.Engineer.Name, "Details", "Engineers", new { id = @join.Engineer.EngineerId})</li>
+    @using (Html.BeginForm("DeleteEngineer", "Engineers"))
+    {
+      @Html.Hidden("joinId", @join.EngineerMachineId)
+      <input type="submit" value="Delete"/>
+    }
+  }
+  </ul>
+}
+<hr>
+<input type="button" value="Return Home" onclick="location.href='@Url.Action("Index", "Home")';" class="btn btn-primary" />
+<input type="button" value="Edit Machine" onclick="location.href='@Url.Action("Edit", "Machines", new { id = Model.MachineId })';" class="btn btn-primary" />
+<input type="button" value="Delete Machine" onclick="location.href='@Url.Action("Delete", "Machines", new { id = Model.MachineId })';" class="btn btn-primary" />
+<input type="button" value="Back to list of machines" onclick="location.href='@Url.Action("Index", "Machines")';" class="btn btn-primary" />
