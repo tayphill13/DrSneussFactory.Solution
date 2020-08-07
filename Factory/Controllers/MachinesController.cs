@@ -16,6 +16,7 @@ namespace Factory.Controllers
     }
     public ActionResult Index()
     {
+      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "Name");
       List<Machine> model = _db.Machines.ToList();
       return View(model);
     }
@@ -61,7 +62,7 @@ namespace Factory.Controllers
 
     public ActionResult Delete(int id)
     {
-      var thisMachine = _db.Machines.FirstOrDefault(machine => machine.MachineId ==id);
+      var thisMachine = _db.Machines.FirstOrDefault(machines => machines.MachineId ==id);
       return View(thisMachine);
     }
 

@@ -6,8 +6,8 @@
 
 <h2>Engineer Details</h2>
 <hr />
-<h3>@Html.DisplayFor(model => model.Name)</h3>
-<h5>This engineer's favorite tool is: @Html.DisplayFor(model => model.FavoriteTool)</h5>
+<h3>@Html.DisplayFor(model => model.Name)</h3><br>
+<h4>Engineer's favorite tool: @Html.DisplayFor(model => model.FavoriteTool)</h4><br>
 
 @if(@Model.Machines.Count() == 0)
 {
@@ -15,8 +15,8 @@
 }
 else
 {
-  <div class="well">
-      <h4 class="col-sm-3">Current Machines this engineer works on:</h4>
+  <div>
+      <h5>Current Machines this engineer works on:</h5>
       <ul>
       @foreach(var join in Model.Machines)
       {
