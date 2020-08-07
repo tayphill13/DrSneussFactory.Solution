@@ -1,0 +1,32 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h2>Engineer Details</h2>
+<hr />
+<h3>@Html.DisplayFor(model => model.Name)</h3>
+<h5>This engineer's favorite tool is: @Html.DisplayFor(model => model.FavoriteTool)</h5>
+
+@if(@Model.Machines.Count() == 0)
+{
+  <p>This engineer has not been certified to work on any machines yet</p>
+}
+else
+{
+  <div class="well">
+      <h4 class="col-sm-3">Current Machines this engineer works on:</h4>
+      <ul>
+      @foreach(var join in Model.Machines)
+      {
+        <li class="col-sm-9">@Html.ActionLink(@join.Machine.Name, "Details", "Machines", new { id = @join.Machine.MachineId})</li>
+      }
+      </ul>
+  </div>
+}
+<hr>
+<input type="button" value="Add a Machine they work on" onclick="location.href='@Url.Action("Create", "Machines", new { id = Model.EngineerId })';" class="btn btn-outline-primary" />
+<input type="button" value="Edit Engineer" onclick="location.href='@Url.Action("Edit", "Engineers", new { id = Model.EngineerId })';" class="btn btn-primary" />
+<input type="button" value="Delete Engineer" onclick="location.href='@Url.Action("Delete", "Engineers", new { id = Model.EngineerId })';" class="btn btn-primary" />
+<input type="button" value="Engineer List" onclick="location.href='@Url.Action("Index", "Engineers")';" class="btn btn-primary" />
