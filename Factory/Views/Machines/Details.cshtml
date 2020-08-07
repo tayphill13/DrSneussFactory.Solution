@@ -30,7 +30,8 @@ else
   </ul>
 }
 <hr>
-<input type="button" value="Return Home" onclick="location.href='@Url.Action("Index", "Home")';" class="btn btn-primary" />
-<input type="button" value="Edit Machine" onclick="location.href='@Url.Action("Edit", "Machines", new { id = Model.MachineId })';" class="btn btn-primary" />
-<input type="button" value="Delete Machine" onclick="location.href='@Url.Action("Delete", "Machines", new { id = Model.MachineId })';" class="btn btn-primary" />
-<input type="button" value="Back to list of machines" onclick="location.href='@Url.Action("Index", "Machines")';" class="btn btn-primary" />
+<input type="button" value="Return Home" onclick="location.href='@Url.Action("Index", "Home")';" class="btn btn-outline-primary" />
+<input type="button" value="Add an Engineer for maintenance" onclick="location.href='@Url.Action("Create", "Engineers", new { id = Model.MachineId })';" class="btn btn-outline-primary" />
+<input type="button" value="Edit Machine" onclick="location.href='@Url.Action("Edit", "Machines", new { id = Model.MachineId })';" class="btn btn-outline-primary" />
+<input type="button" value="Delete Machine" onclick="location.href='@Url.Action("Delete", "Machines", new { id = Model.MachineId })';" class="btn btn-outline-primary" />
+<input type="button" value="Back to list of machines" onclick="location.href='@Url.Action("Index", "Machines")';" class="btn btn-outline-primary" />
