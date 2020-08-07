@@ -14,6 +14,11 @@ namespace Factory.Controllers
     {
       _db = db;
     }
+    public ActionResult Index()
+    {
+      List<Machine> model = _db.Machines.ToList();
+      return View(model);
+    }
     public ActionResult Details(int id)
     {
       var thisMachine = _db.Machines
@@ -87,11 +92,6 @@ namespace Factory.Controllers
     }
     _db.SaveChanges();
     return RedirectToAction("Index");  
-    }
-    public ActionResult Index()
-    {
-      List<Machine> model = _db.Machines.ToList();
-      return View(model);
     }
   }
 }
