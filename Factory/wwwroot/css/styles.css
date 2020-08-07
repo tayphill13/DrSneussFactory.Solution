@@ -1,0 +1,11 @@
+body{
+  background-image: url("");
+  background-size: cover;
+}
+
+.container  {
+  background-color: rgba(245, 245, 245, 0.80);
+  border-style: ridge;
+  border-color: rgba(32, 17, 17, 0.85);
+  border-radius: 15px;
+}
