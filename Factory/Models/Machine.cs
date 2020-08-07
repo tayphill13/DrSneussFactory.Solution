@@ -15,5 +15,4 @@ namespace Factory.Models
     public string Product {get;set;}
     public virtual ICollection<EngineerMachine> Engineers {get; set;}
   }
-    
 }
