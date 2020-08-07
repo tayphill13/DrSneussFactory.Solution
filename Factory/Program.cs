@@ -5,7 +5,7 @@ namespace Factory
 {
   public class Program
   {
-    public static void Main(atring[] args)
+    public static void Main(string[] args)
     {
       var host = new WebHostBuilder()
         .UseKestrel()
