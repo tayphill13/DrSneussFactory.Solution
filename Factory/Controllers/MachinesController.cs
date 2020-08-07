@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Factory.Controllers
 {
-  public class MachinesControlller : Controller
+  public class MachinesController : Controller
   {
     private readonly FactoryContext _db;
-    public MachinesControlller(FactoryContext db)
+    public MachinesController(FactoryContext db)
     {
       _db = db;
     }
@@ -24,12 +24,12 @@ namespace Factory.Controllers
       var thisMachine = _db.Machines
           .Include(machine => machine.Engineers)
           .ThenInclude(join => join.Engineer)
-          .FirstOrDefault(machine => machine.MachineId ==id);
+          .FirstOrDefault(machine => machine.MachineId == id);
       return View(thisMachine);
     }
     public ActionResult Create()
     {
-      ViewBag.MachineId = new SelectList(_db.Engineers, "EngineerId", "Name");
+      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "Name");
       return View();
     }
     public ActionResult Edit(int id)
