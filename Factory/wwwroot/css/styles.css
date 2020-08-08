@@ -5,6 +5,13 @@ body {
 h1  {
   font-family: 'Yrsa', cursive;
 }
+h4  {
+  font-family: 'Yrsa', cursive 
+}
+
+input {
+  font-family: 'Viaoda Libre', cursive;
+}
 .card  {
   margin-top: 3%;
   margin-bottom: 3%;
@@ -15,6 +22,7 @@ h1  {
 
 .nav {
   background-color: rgba(245, 245, 245, 0.75);
+  font-family: 'Philosopher', sans-serif;
 }
 
 div#footer {
