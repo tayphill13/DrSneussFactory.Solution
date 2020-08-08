@@ -8,11 +8,9 @@
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)<br>
+    <p>Name: @Html.TextBoxFor(model => model.Name)</p>
 
-    @Html.LabelFor(model => model.FavoriteTool)
-    @Html.TextBoxFor(model => model.FavoriteTool)
+    <p>Favorite Tool: @Html.TextBoxFor(model => model.FavoriteTool)</p>
 
     <input type="submit" value="Add new engineer" class="btn btn-outline-dark" />
 }
