@@ -19,13 +19,13 @@ _This application was built to demonstrate the use of a database and many to man
 
 ## Specifications
 
-| Spec | Input | Output |
-| :--- | :---: | ---: |
-| User will be first directed to the homepage where they can select to see a list of Engineers and/or see a list of Machines  |   |   |
-| On the Engineers page, User can select a specific engineer to see their name, favorite tool, and what machines they are able to work on |   |   |
-| On the Machines page, User can select a specific Machine to view the name, what product it makes and what Engineers currently maintain it |   |     |
-| User is able to return to the homepage from multiple pages  |   |     |
-| New Engineers can be added, as well as new Machines.  They can also be deleted  |     |     |
+| Spec |
+| :--- |
+| User will be first directed to the homepage where they can select to see a list of Engineers and/or see a list of Machines  |
+| On the Engineers page, User can select a specific engineer to see their name, favorite tool, and what machines they are able to work on |
+| On the Machines page, User can select a specific Machine to view the name, what product it makes and what Engineers currently maintain it |
+| User is able to return to the homepage from multiple pages  |
+| New Engineers can be added, as well as new Machines.  They can also be deleted  |
 
 
 <br>
