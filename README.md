@@ -54,6 +54,14 @@ If you wish to edit the code base: Open the project in your code editor; with Ba
 
 [![MySql gif tutorial](https://i.gyazo.com/7344f0f1229a3da604673362176a43d4.gif)](https://gyazo.com/7344f0f1229a3da604673362176a43d4))
 * Within the project file, `appsettings.json` you will need to be sure that the password (pwd) matches the password that you are using for your MySql Workbench.
+* Your appsettings.json file should follow this format: <br>
+
+  ```{
+  }
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=localhost;Port3306;databaseNameHere;uid=YourUserNameHere;pwd=YourPasswordHere;"
+      }
+  }
 
 #### Alternatively,
 * In your command line terminal, type `cd Desktop` then navigate to project folder using `cd DrSneussFactory.Solution`
